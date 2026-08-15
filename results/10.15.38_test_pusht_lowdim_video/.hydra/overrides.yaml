@@ -1,0 +1,12 @@
+- task=pusht_lowdim
+- training.seed=42
+- training.device=cuda:0
+- training.num_epochs=10
+- training.rollout_every=5
+- training.checkpoint_every=5
+- dataloader.batch_size=64
+- task.env_runner.n_test=2
+- task.env_runner.n_test_vis=1
+- task.env_runner.n_train=1
+- task.env_runner.n_train_vis=1
+- logging.mode=offline

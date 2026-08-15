@@ -145,3 +145,4 @@ data/pusht/pusht_cchi_v7_replay.zarr
 ![alt text](image.png)
 컴퓨터 너무 뜨거워져서 6에폭째에 꺼버림
 
+![alt text](mp4.gif)
