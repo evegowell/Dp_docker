@@ -1,0 +1,7 @@
+# diffusion_policy 저장소/데이터는 COPY하지 않고 볼륨 마운트만 하므로
+# build context에 포함시켜서 전송 속도를 낭비하지 않도록 제외
+diffusion_policy/
+**/*.zarr
+**/*.ckpt
+**/data/
+**/.git

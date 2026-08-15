@@ -1,0 +1,73 @@
+# ==========================================
+# 1. 사용자 지정 제외 폴더
+# ==========================================
+diffusion_policy/
+diffusion_policy/**
+
+# ==========================================
+# 2. Python / Virtual Environment
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 가상환경 (venv, conda 등)
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# 3. Model Checkpoints & Large Data
+# ==========================================
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+*.bin
+*.h5
+
+# 데이터셋 및 로그
+data/
+datasets/
+logs/
+wandb/
+runs/
+
+# ==========================================
+# 4. OS & IDE Configuration Files
+# ==========================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code / PyCharm
+.vscode/
+.idea/
+
+# C++ / CMake 빌드 파일 (ROS2 / C++ 사용 시)
+build/
+install/
+log/
