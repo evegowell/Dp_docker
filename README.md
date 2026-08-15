@@ -133,6 +133,8 @@ docker compose run --rm diffusion_policy
 ```
 docker compose run --rm diffusion_policy 
 
+mkdir로 data 폴더 만들어서 아래 파일 다운받았던것같음 위에 트리 확인해서 하기!
+
 wget https://diffusion-policy.cs.columbia.edu/data/training/pusht.zip
 #https://diffusion-policy.cs.columbia.edu/data/training/ 사이트
 ```
