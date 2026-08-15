@@ -141,3 +141,7 @@ wget https://diffusion-policy.cs.columbia.edu/data/training/pusht.zip
 데이터 받아서 압축 풀면
 data/pusht/pusht_cchi_v7_replay.zarr
 경로로 데이터가 들어가짐!! pusht 안에 한던 더 싸여있는 구조임
+
+![alt text](image.png)
+컴퓨터 너무 뜨거워져서 6에폭째에 꺼버림
+
