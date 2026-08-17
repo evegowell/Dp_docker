@@ -146,3 +146,29 @@ data/pusht/pusht_cchi_v7_replay.zarr
 컴퓨터 너무 뜨거워져서 6에폭째에 꺼버림
 
 ![alt text](mp4.gif)
+
+# 그냥 재밌어서 적어둔거
+
+# 데이터 구조
+![alt text](image-1.png)
+## 전체 요약
+ 
+- 총 스텝 수: 25,650 (모든 에피소드를 이어붙인 길이)
+- 에피소드 수: 206개
+- 평균 에피소드 길이: 약 124 스텝 (25650 / 206)
+## 각 배열 의미
+ 
+| 이름 | shape | 의미 |
+|---|---|---|
+| `action` | (25650, 2) | 각 스텝에서 취한 액션. pusht는 end-effector를 (x, y) 평면상에서 움직이는 태스크라 2차원 |
+| `state` | (25650, 5) | lowdim 학습에 쓰이는 저차원 상태. 보통 `[agent_x, agent_y, block_x, block_y, block_angle]` 구성 |
+| `keypoint` | (25650, 9, 2) | T블록 위의 9개 keypoint 좌표 (x, y). keypoint 기반 관찰을 쓰는 변형 실험에 사용 |
+| `img` | (25650, 96, 96, 3) | 96x96 RGB 이미지. image 기반 학습용 (lowdim에서는 안 씀) |
+| `n_contacts` | (25650, 1) | 접촉 개수 (물리 시뮬레이션 접촉 정보, 보통 학습에 직접 안 씀) |
+| `episode_ends` | (206,) | 각 에피소드가 전체 시퀀스에서 몇 번째 인덱스까지인지 (누적 인덱스) |
+ 
+## 참고
+ 
+- `state`(lowdim용)와 `img`(image용) 데이터가 하나의 zarr 파일에 함께 저장되어 있음.
+- `pusht_lowdim.yaml` 사용 시 `state`만 읽고, `pusht_image.yaml` 사용 시 `img`(+일부 저차원 값)를 읽음.
+- obs_dim=20은 여러 timestep을 stack하여 만들어지는 값 (예: n_obs_steps=2 등).
